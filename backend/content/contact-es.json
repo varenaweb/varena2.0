@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Contacto | Varena",
+    "description": "Escribinos sobre tu proyecto web, contamos con landing, sitios completos, tiendas y atención personalizada para emprendedores y profesionales.",
+    "langLabel": "ES"
+  },
+  "nav": {
+    "logoHref": "/contacto",
+    "items": [
+      { "href": "/", "label": "Inicio" },
+      { "href": "/servicios", "label": "Servicios" },
+      { "href": "/planes", "label": "Planes" },
+      { "href": "/contacto", "label": "Contacto", "cta": true }
+    ]
+  },
+  "hero": {
+    "anchorId": "contacto",
+    "kicker": "Contacto",
+    "title": "¿Hablamos de tu web?",
+    "description": "Compartinos tus datos y un resumen de tu situación. Te respondemos para ver si tiene sentido trabajar juntos y qué formato encaja mejor con vos."
+  },
+  "prompts": {
+    "title": "Podés comentar, por ejemplo:",
+    "items": [
+      "Qué hacés y a quién atendés.",
+      "Si ya tenés web o estás empezando.",
+      "Qué te gustaría que cambie con una web clara.",
+      "Si pensás en una landing, sitio completo o tienda online."
+    ]
+  },
+  "hint": "El mensaje inicial no es un compromiso. Es una primera charla para entender tu caso y decidir juntos si somos la opción indicada.",
+  "contactForm": {
+    "labels": {
+      "name": "Nombre y apellido",
+      "email": "Correo electrónico",
+      "projectType": "Tipo de proyecto",
+      "projectContext": "Negocio / proyecto",
+      "message": "Contame un poco más",
+      "submit": "Enviar mensaje"
+    },
+    "projectOptions": {
+      "landing": "Landing puntual",
+      "web_full": "Sitio completo",
+      "ecommerce": "Tienda online / e-commerce",
+      "other": "No estoy seguro todavía"
+    },
+    "projectOptionsSelect": "Seleccioná una opción",
+    "placeholders": {
+      "name": "Cómo te llamás",
+      "projectContext": "Ej: estudio, consultorio, marca personal",
+      "message": "Contame qué hacés y qué querés lograr con tu página web."
+    }
+  },
+  "footer": {
+    "tagline": "Tu página web, trabajando por vos.",
+    "links": [
+      { "href": "/", "label": "Inicio" },
+      { "href": "/servicios", "label": "Servicios" },
+      { "href": "/planes", "label": "Planes" },
+      { "href": "/contacto", "label": "Contacto" }
+    ]
+  },
+  "whatsapp": {
+    "message": "Hola Varena! Quiero hacer una consulta.",
+    "label": "Contactar por WhatsApp"
+  }
+}

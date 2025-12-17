@@ -1,0 +1,322 @@
+<%- include("partials/head") %>
+<%- include("partials/header") %>
+
+<main>
+  <!-- HERO -->
+  <section id="<%= strings.hero.anchorId %>" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="hero-kicker"><%= strings.hero.kicker %></p>
+        <h1 class="hero-title hero-title-image">
+          <img src="img/varena-logo-hero-tagline.png"
+               alt="Varena. Tu página web, trabajando por vos.">
+        </h1>
+        <p class="hero-subtitle"><%= strings.hero.subtitle %></p>
+        <ul class="hero-list">
+          <% strings.hero.list.forEach(item => { %>
+            <li><%= item %></li>
+          <% }); %>
+        </ul>
+        <div class="hero-actions">
+          <a href="<%= strings.hero.buttons.primaryHref %>" class="btn btn-primary"><%= strings.hero.buttons.primary %></a>
+          <a href="<%= strings.hero.buttons.secondaryHref %>" class="btn btn-secondary"><%= strings.hero.buttons.secondary %></a>
+        </div>
+        <p class="hero-note"><%= strings.hero.note %></p>
+      </div>
+
+      <div class="hero-visual">
+        <figure class="hero-image-card">
+          <img src="img/varena-hero-clienta.png" alt="Cliente viendo su nueva página web diseñada por Varena" class="hero-image">
+          <figcaption class="hero-caption">
+            Un sitio prolijo, fácil de leer y con un llamado a la acción evidente.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="container hero-badges">
+      <% strings.hero.badges.forEach(badge => { %>
+        <div class="badge"><%= badge %></div>
+      <% }); %>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="<%= strings.services.anchorId %>" class="section">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-kicker"><%= strings.services.kicker %></p>
+        <h2 class="section-title"><%= strings.services.title %></h2>
+        <p class="section-description">
+          <%= strings.services.description %>
+        </p>
+      </header>
+
+      <div class="services-grid services-grid--main">
+        <% strings.services.cards.forEach(card => { %>
+          <article class="service-card">
+            <h3 class="service-title"><%= card.title %></h3>
+            <p class="service-text"><%= card.text %></p>
+            <ul class="service-list">
+              <% card.list.forEach(item => { %>
+                <li><%= item %></li>
+              <% }); %>
+            </ul>
+          </article>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ INCLUYEN -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-kicker"><%= strings.services.common.kicker %></p>
+        <h2 class="section-title"><%= strings.services.common.title %></h2>
+        <p class="section-description"><%= strings.services.common.description %></p>
+      </header>
+
+      <div class="services-grid">
+        <% strings.services.common.cards.forEach(card => { %>
+          <article class="service-card">
+            <h3 class="service-title"><%= card.title %></h3>
+            <ul class="service-list">
+              <% card.list.forEach(item => { %>
+                <li><%= item %></li>
+              <% }); %>
+            </ul>
+          </article>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANES -->
+  <section id="<%= strings.plans.anchorId %>" class="section section-alt">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-kicker"><%= strings.plans.kicker %></p>
+        <h2 class="section-title"><%= strings.plans.title %></h2>
+        <p class="section-description"><%= strings.plans.description %></p>
+      </header>
+
+      <div class="plans-grid">
+        <% strings.plans.cards.forEach(card => { %>
+          <article class="plan-card <%= card.label === "Página web" || card.label === "Website" ? "plan-card-highlight" : "" %>">
+            <p class="plan-label"><%= card.label %></p>
+            <h3 class="plan-title"><%= card.title %></h3>
+            <div class="plan-main">
+              <p class="plan-ideal"><%= card.main %></p>
+              <ul class="plan-list">
+                <% card.list.forEach(item => { %>
+                  <li><%= item %></li>
+                <% }); %>
+              </ul>
+              <p class="plan-note"><%= card.note %></p>
+            </div>
+            <div class="plan-price">
+              <span class="plan-price-label">Desde</span>
+              <div class="plan-price-row">
+                <span id="<%= card.priceIds?.ars %>" class="plan-price-item plan-price-item--ars"></span>
+                <span id="<%= card.priceIds?.usd %>" class="plan-price-item plan-price-item--usd"></span>
+              </div>
+            </div>
+          </article>
+        <% }); %>
+      </div>
+
+      <p class="plans-disclaimer"><%= strings.plans.disclaimer %></p>
+    </div>
+  </section>
+
+  <!-- MEDIOS DE PAGO -->
+  <section id="<%= strings.payment.anchorId %>" class="section">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-kicker"><%= strings.payment.kicker %></p>
+        <h2 class="section-title"><%= strings.payment.title %></h2>
+        <p class="section-description"><%= strings.payment.description %></p>
+      </header>
+
+      <div class="services-grid payment-grid">
+        <% strings.payment.cards.forEach(card => { %>
+          <article class="service-card">
+            <h3 class="service-title"><%= card.title %></h3>
+            <p class="service-text"><%= card.text %></p>
+            <ul class="service-list">
+              <% card.list.forEach(item => { %>
+                <li><%= item %></li>
+              <% }); %>
+            </ul>
+          </article>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section id="<%= strings.process.anchorId %>" class="section section-alt">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-kicker"><%= strings.process.kicker %></p>
+        <h2 class="section-title"><%= strings.process.title %></h2>
+        <p class="section-description"><%= strings.process.description %></p>
+      </header>
+
+      <div class="process-grid">
+        <% strings.process.steps.forEach(step => { %>
+          <article class="process-step">
+            <div class="step-number"><%= step.number %></div>
+            <h3 class="step-title"><%= step.title %></h3>
+            <p class="step-text"><%= step.text %></p>
+          </article>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="<%= strings.faq.anchorId %>" class="section">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-kicker"><%= strings.faq.kicker %></p>
+        <h2 class="section-title"><%= strings.faq.title %></h2>
+      </header>
+
+      <div class="faq-list">
+        <% strings.faq.items.forEach(item => { %>
+          <article class="faq-item">
+            <button class="faq-question">
+              <span><%= item.question %></span>
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-answer">
+              <p><%= item.answer %></p>
+            </div>
+          </article>
+        <% }); %>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE VARENA -->
+  <section id="<%= strings.about.anchorId %>" class="section">
+    <div class="container about-layout">
+      <div class="about-text">
+        <header class="section-header section-header-left">
+          <p class="section-kicker"><%= strings.about.kicker %></p>
+          <h2 class="section-title"><%= strings.about.title %></h2>
+        </header>
+        <% strings.about.paragraphs.forEach(paragraph => { %>
+          <p><%= paragraph %></p>
+        <% }); %>
+      </div>
+      <aside class="about-card">
+        <img src="img/varena-logo-stacked.png" alt="Varena logo" class="about-logo">
+        <p class="about-name"><%= strings.about.aside.name %></p>
+        <p class="about-tagline"><%= strings.about.aside.tagline %></p>
+        <p class="about-note"><%= strings.about.aside.note %></p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="<%= strings.contact.anchorId %>" class="section section-alt">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-kicker"><%= strings.contact.kicker %></p>
+        <h2 class="section-title"><%= strings.contact.title %></h2>
+        <p class="section-description"><%= strings.contact.description %></p>
+      </header>
+
+      <div class="contact-layout">
+        <div class="contact-text">
+          <p><%= strings.contact.promptsTitle %></p>
+          <ul class="contact-list">
+            <% strings.contact.promptsList.forEach(prompt => { %>
+              <li><%= prompt %></li>
+            <% }); %>
+          </ul>
+          <p class="contact-hint"><%= strings.contact.hint %></p>
+        </div>
+
+        <div class="contact-card">
+          <form
+            id="contact-form"
+            class="contact-form"
+            data-contact-form
+            data-lang="<%= lang %>"
+            action="<%= contactApi %>"
+            method="post"
+          >
+            <input type="hidden" name="lang" value="<%= lang %>">
+            <input
+              type="text"
+              name="website"
+              class="form-input form-input--hidden"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            >
+            <input type="hidden" name="recaptchaToken" value="">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="nombre"><%= strings.contact.formNameLabel || "Nombre y apellido" %></label>
+                <input type="text" id="nombre" name="name" class="form-input" placeholder="<%= strings.contact.formNamePlaceholder || strings.contact.title %>" required>
+                <p class="form-error" data-error-for="name"></p>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email"><%= strings.contact.formEmailLabel || "Correo electrónico" %></label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="tu@correo.com" required>
+                <p class="form-error" data-error-for="email"></p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="tipo"><%= strings.contact.formProjectLabel || "Tipo de proyecto" %></label>
+              <select id="tipo" name="projectType" class="form-select" required>
+                <option value=""><%= strings.contact.formProjectSelect || "Seleccioná una opción" %></option>
+                <option value="landing"><%= strings.contact.projectOptions?.landing || "Landing puntual" %></option>
+                <option value="web_full"><%= strings.contact.projectOptions?.web_full || "Sitio completo" %></option>
+                <option value="ecommerce"><%= strings.contact.projectOptions?.ecommerce || "Tienda online / e-commerce" %></option>
+                <option value="other"><%= strings.contact.projectOptions?.other || "No estoy seguro todavía" %></option>
+              </select>
+              <p class="form-error" data-error-for="projectType"></p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="negocio"><%= strings.contact.formContextLabel || "Negocio / proyecto" %></label>
+              <input type="text" id="negocio" name="projectContext" class="form-input" placeholder="<%= strings.contact.formContextPlaceholder || "Ej: estudio, consultorio, marca personal" %>">
+              <p class="form-error" data-error-for="projectContext"></p>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="mensaje"><%= strings.contact.formMessageLabel || "Contame un poco más" %></label>
+              <textarea
+                id="mensaje"
+                name="message"
+                class="form-textarea"
+                placeholder="<%= strings.contact.formMessagePlaceholder || "Contame brevemente qué hacés, a quién atendés y qué te gustaría lograr con tu página web." %>"
+              ></textarea>
+              <p class="form-error" data-error-for="message"></p>
+              <p class="form-hint">
+                <%= strings.contact.hint %>
+              </p>
+            </div>
+
+            <div class="submit-row">
+              <button type="submit" class="btn btn-primary"><%= strings.contact.formSubmitLabel || (lang === "en" ? "Send message" : "Enviar mensaje") %></button>
+            </div>
+
+            <div class="form-status" aria-live="polite" role="status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include("partials/whatsapp") %>
+<%- include("partials/footer") %>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+<head>
+  <meta charset="UTF-8">
+  <title><%= strings.meta.title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<%= strings.meta.description %>">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/varena-favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/varena-favicon-16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script>
+    window.RECAPTCHA_SITE_KEY = "<%= recaptchaSiteKey %>";
+    window.CONTACT_API = "<%= contactApi %>";
+  </script>
+  <script src="/contact-config.js" defer></script>
+  <script src="/script.js" defer></script>
+  <script src="/contact.js" defer></script>
+</head>
+<body>

@@ -1,0 +1,21 @@
+Varena backend listening on port 4000
+Render error: ReferenceError: C:\Users\PC\Documents\Varena\a1\backend\views\admin\edit.ejs:77
+    75|         <div class="form-foot">
+    76|           <div>
+ >> 77|             <% if (saved) { %>
+    78|               <span class="message">Saved successfully.</span>
+    79|             <% } %>
+    80|             <% if (error) { %>
+
+saved is not defined
+    at eval ("C:\\Users\\PC\\Documents\\Varena\\a1\\backend\\views\\admin\\edit.ejs":30:8)
+    at edit (C:\Users\PC\Documents\Varena\a1\node_modules\ejs\lib\ejs.js:703:17)
+    at tryHandleCache (C:\Users\PC\Documents\Varena\a1\node_modules\ejs\lib\ejs.js:274:36)
+    at exports.renderFile [as engine] (C:\Users\PC\Documents\Varena\a1\node_modules\ejs\lib\ejs.js:491:10)
+    at View.render (C:\Users\PC\Documents\Varena\a1\node_modules\express\lib\view.js:135:8)
+    at tryRender (C:\Users\PC\Documents\Varena\a1\node_modules\express\lib\application.js:657:10)
+    at app.render (C:\Users\PC\Documents\Varena\a1\node_modules\express\lib\application.js:609:3)
+    at ServerResponse.render (C:\Users\PC\Documents\Varena\a1\node_modules\express\lib\response.js:1049:7)
+    at C:\Users\PC\Documents\Varena\a1\backend\routes\admin.js:18:9 {
+  path: 'C:\\Users\\PC\\Documents\\Varena\\a1\\backend\\views\\admin\\edit.ejs'
+}

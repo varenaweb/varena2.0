@@ -1,0 +1,72 @@
+<%- include("partials/head") %>
+<%- include("partials/header") %>
+
+<main>
+  <!-- HERO -->
+  <section id="<%= strings.hero.anchorId %>" class="section section-alt">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-kicker"><%= strings.hero.kicker %></p>
+        <h1 class="section-title"><%= strings.hero.title %></h1>
+        <p class="section-description"><%= strings.hero.description %></p>
+      </header>
+
+      <div class="plans-grid">
+        <% strings.plans.cards.forEach(card => { %>
+          <article class="plan-card <%= card.linearClass %>">
+            <p class="plan-label <%= card.linearClass ? "plan-label-highlight" : "" %>"><%= card.label %></p>
+            <h2 class="plan-title"><%= card.title %></h2>
+            <div class="plan-main">
+              <p class="plan-ideal"><%= card.main %></p>
+              <ul class="plan-list">
+                <% card.list.forEach(item => { %>
+                  <li><%= item %></li>
+                <% }) %>
+              </ul>
+              <p class="plan-note"><%= card.note %></p>
+            </div>
+            <div class="plan-price">
+              <span class="plan-price-label"><%= lang === "en" ? "From" : "Desde" %></span>
+              <div class="plan-price-row">
+                <span class="plan-price-item plan-price-item--ars"><%= card.price.ars %></span>
+                <span class="plan-price-item plan-price-item--usd"><%= card.price.usd %></span>
+              </div>
+            </div>
+          </article>
+        <% }) %>
+      </div>
+      <p class="plans-disclaimer"><%= strings.plans.disclaimer %></p>
+    </div>
+  </section>
+
+  <!-- PAYMENT METHODS -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-kicker"><%= strings.payment.kicker %></p>
+        <h2 class="section-title"><%= strings.payment.title %></h2>
+      </header>
+      <div class="services-grid payment-grid">
+        <% strings.payment.cards.forEach(card => { %>
+          <article class="service-card">
+            <h3 class="service-title"><%= card.title %></h3>
+            <p class="service-text"><%= card.text %></p>
+            <ul class="service-list">
+              <% card.list.forEach(item => { %>
+                <li><%= item %></li>
+              <% }) %>
+            </ul>
+          </article>
+        <% }) %>
+      </div>
+      <div class="section-header" style="margin-top: 24px;">
+        <p class="section-kicker"><%= strings.payment.process.kicker %></p>
+        <h2 class="section-title"><%= strings.payment.process.title %></h2>
+        <p class="section-description"><%= strings.payment.process.description %></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include("partials/whatsapp") %>
+<%- include("partials/footer") %>

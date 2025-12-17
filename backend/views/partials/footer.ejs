@@ -1,0 +1,18 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <img src="/img/varena-icon.png" alt="Varena icono" class="footer-logo">
+      <span>
+        © <span id="year"></span> Varena
+        <span class="footer-tagline"><%= strings.footer.tagline %></span>
+      </span>
+    </div>
+    <nav class="footer-links">
+      <% strings.footer.links.forEach(link => { %>
+        <a href="<%= link.href %>"><%= link.label %></a>
+      <% }) %>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- circulito suave de fondo -->
+  <circle cx="16" cy="16" r="15" fill="#FFFFFF" stroke="#E5E7EB"></circle>
+  <!-- línea y flecha modernas -->
+  <path d="M10 16H20" stroke="#004AAD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M16 12L20 16L16 20" stroke="#004AAD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>

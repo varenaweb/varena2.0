@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Planes y precios | Varena",
+    "description": "Planes y rangos de inversión para landings, sitios web y tiendas online. Pagos en pesos o dólares con diseño profesional y SEO básico.",
+    "langLabel": "ES"
+  },
+  "nav": {
+    "logoHref": "/planes",
+    "items": [
+      { "href": "/", "label": "Inicio" },
+      { "href": "/servicios", "label": "Servicios" },
+      { "href": "/planes", "label": "Planes" },
+      { "href": "/#faq", "label": "Preguntas" },
+      { "href": "/contacto", "label": "Contacto", "cta": true }
+    ]
+  },
+  "hero": {
+    "anchorId": "planes",
+    "kicker": "Planes",
+    "title": "Opciones y rangos de inversión",
+    "description": "Los valores de referencia muestran la inversión típica por tipo de proyecto. El presupuesto final depende del alcance y necesidades específicas. Pagás en dos pagos: 50% al iniciar y 50% al publicar."
+  },
+  "plans": {
+    "cards": [
+      {
+        "label": "Landing",
+        "title": "Planes para página de una sola oferta",
+        "linearClass": "",
+        "main": "Para campañas, lanzamientos o servicios puntuales.",
+        "list": [
+          "Landing con bloques ordenados y un llamado a la acción claro.",
+          "Foco en generar consultas, reservas o registros sin distraer.",
+          "Incluye WhatsApp, formulario y enlaces a redes.",
+          "Diseño optimizado para celular, tablet y desktop."
+        ],
+        "note": "Tu landing queda lista para publicar con diseño, maquetado, SEO y puesta en línea.",
+        "price": {
+          "ars": "$ 150.000",
+          "usd": "USD 100"
+        }
+      },
+      {
+        "label": "Página web",
+        "title": "Planes para sitio web de tu negocio",
+        "linearClass": "plan-card-highlight",
+        "main": "Para estudios, consultorios y marcas personales que necesitan su casa propia online.",
+        "list": [
+          "Inicio + hasta 5 páginas internas (sobre, servicios, FAQ, contacto).",
+          "Organizamos tus contenidos y redactamos textos claros.",
+          "Incluye WhatsApp, formulario y enlaces sociales.",
+          "Diseño adaptable y listo para crecer."
+        ],
+        "note": "Pensado como tu centro online: presentás tu trabajo y compartís con clientes.",
+        "price": {
+          "ars": "$ 450.000",
+          "usd": "USD 300"
+        }
+      },
+      {
+        "label": "E-commerce",
+        "title": "Planes para tienda online / e-commerce",
+        "linearClass": "",
+        "main": "Ideal si querés empezar a vender directamente desde tu web.",
+        "list": [
+          "Catálogo con fotos, descripciones y precios.",
+          "Carrito y checkout con medios de pago y envíos.",
+          "Pensado para que lo puedas actualizar vos mismo.",
+          "Diseño optimizado para comprar desde el celular."
+        ],
+        "note": "La tienda queda lista para vender: diseño, catálogo, configuración de pagos y publicación.",
+        "price": {
+          "ars": "$ 1.000.000",
+          "usd": "USD 650"
+        }
+      }
+    ],
+    "disclaimer": "*Valores orientativos. El presupuesto final se define según el alcance concreto, la cantidad de secciones y tus necesidades."
+  },
+  "payment": {
+    "kicker": "Pagos",
+    "title": "Formas de pago y moneda",
+    "cards": [
+      {
+        "title": "Pesos argentinos (ARS)",
+        "text": "Ideal si estás en Argentina y preferís pagar en pesos.",
+        "list": [
+          "Transferencia bancaria en pesos.",
+          "Mercado Pago."
+        ]
+      },
+      {
+        "title": "Dólares estadounidenses (USD)",
+        "text": "Para quienes manejan dólares y prefieren pagar en esa moneda.",
+        "list": [
+          "Zelle (EEUU).",
+          "Transferencia a Banco Pichincha (Ecuador)."
+        ]
+      }
+    ],
+    "process": {
+      "kicker": "Modalidad",
+      "title": "Cómo se realiza el pago",
+      "description": "Trabajamos en dos pagos: 50% al iniciar (reserva y armado) y 50% al entregar la web publicada. Todo se documenta antes de empezar."
+    }
+  },
+  "footer": {
+    "tagline": "Tu página web, trabajando por vos.",
+    "links": [
+      { "href": "/", "label": "Inicio" },
+      { "href": "/servicios", "label": "Servicios" },
+      { "href": "/planes", "label": "Planes" },
+      { "href": "/contacto", "label": "Contacto" }
+    ]
+  },
+  "whatsapp": {
+    "message": "Hola Varena! Quiero hacer una consulta.",
+    "label": "Contactar por WhatsApp"
+  }
+}

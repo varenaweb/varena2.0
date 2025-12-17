@@ -1,0 +1,53 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="<%= strings.nav.logoHref %>" class="logo">
+      <img src="/img/varena-logo-horizontal.png" alt="Varena">
+    </a>
+
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav">
+      <% strings.nav.items.forEach(item => { %>
+        <a
+          href="<%= item.href %>"
+          class="<%= item.cta ? "nav-cta" : "" %>"
+        ><%= item.label %></a>
+      <% }); %>
+
+      <div class="lang-switcher">
+        <button
+          type="button"
+          class="lang-current"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <span class="lang-current-icon">🌐</span>
+          <span class="lang-current-label"><%= strings.meta.langLabel %></span>
+        </button>
+
+        <div class="lang-menu" role="menu">
+          <button
+            class="lang-switch"
+            data-lang="es"
+            data-target="<%= lang === "es" ? currentPath : alternatePath %>"
+            role="menuitem"
+          >
+            Español
+          </button>
+          <button
+            class="lang-switch"
+            data-lang="en"
+            data-target="<%= lang === "en" ? currentPath : alternatePath %>"
+            role="menuitem"
+          >
+            English
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

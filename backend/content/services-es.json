@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "title": "Servicios | Varena",
+    "description": "Un vistazo completo a los servicios de Varena: landing, sitios completos y tiendas online con foco en claridad, atención personalizada y resultados claros.",
+    "langLabel": "ES"
+  },
+  "nav": {
+    "logoHref": "/servicios",
+    "items": [
+      { "href": "/", "label": "Inicio" },
+      { "href": "/servicios", "label": "Servicios" },
+      { "href": "/planes", "label": "Planes" },
+      { "href": "/#faq", "label": "Preguntas" },
+      { "href": "/contacto", "label": "Contacto", "cta": true }
+    ]
+  },
+  "hero": {
+    "anchorId": "servicios",
+    "kicker": "Servicios",
+    "title": "Tres formas de trabajar tu presencia online",
+    "description": "Podés necesitar una landing puntual, un sitio completo o una tienda online. Varena adapta cada proyecto a tu etapa actual con enfoque profesional y claridad."
+  },
+  "cards": [
+    {
+      "title": "Página para una sola oferta (landing)",
+      "text": "Una página única para presentar una oferta clara, un curso o una campaña con un objetivo principal: que la gente entienda tu propuesta y sepa qué hacer después.",
+      "list": [
+        "Estructura típica: problema, solución, beneficios, prueba social, FAQ y contacto.",
+        "Ideal para anuncios, redes sociales o campañas de email.",
+        "Incluye botón de WhatsApp, formulario y enlaces a redes.",
+        "Diseño optimizado para carga rápida y dispositivos móviles.",
+        "Configuración orientada a SEO."
+      ]
+    },
+    {
+      "title": "Sitio web para tu negocio",
+      "text": "Tu espacio principal online con varias secciones para mostrar quién sos, qué hacés, cómo trabajás y cómo contactarte.",
+      "list": [
+        "Home + secciones clave como Sobre, Servicios, FAQ y Contacto.",
+        "Ordenamos contenidos y redactamos textos claros para personas y buscadores.",
+        "Incluye botón de WhatsApp, formulario y redes.",
+        "Diseño adaptable a todos los dispositivos.",
+        "Preparado para crecer con más secciones o blog."
+      ]
+    },
+    {
+      "title": "Tienda online / e-commerce",
+      "text": "Para vender productos o servicios directamente desde tu web con catálogo organizado y proceso de compra claro.",
+      "list": [
+        "Catálogo con fotos, descripciones y precios.",
+        "Carrito y checkout con pagos y envíos definidos.",
+        "Estructura pensada para SEO.",
+        "Diseño cómodo en móviles.",
+        "Capacitación para editar productos."
+      ]
+    }
+  ],
+  "common": {
+    "kicker": "Qué incluyen",
+    "title": "Lo que tienen en común todos los proyectos",
+    "description": "Todas las webs de Varena comparten claridad, atención al detalle y foco en que puedas usar la página en tu día a día.",
+    "cards": [
+      {
+        "title": "Conectada con tus canales",
+        "list": [
+          "Botón de WhatsApp para recibir consultas directo.",
+          "Formulario conectado a tu correo.",
+          "Enlaces a redes sociales."
+        ]
+      },
+      {
+        "title": "Diseño y experiencia",
+        "list": [
+          "Diseño optimizado para celular, tablet y computadora.",
+          "Bloques ordenados que guían la lectura.",
+          "Estilo alineado con tu marca."
+        ]
+      },
+      {
+        "title": "SEO y publicación",
+        "list": [
+          "Configuración inicial orientada a SEO.",
+          "Asistencia en configurar dominio y hosting.",
+          "Publicación final y revisión."
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Tu página web, trabajando por vos.",
+    "links": [
+      { "href": "/", "label": "Inicio" },
+      { "href": "/#servicios", "label": "Servicios" },
+      { "href": "/planes", "label": "Planes" },
+      { "href": "/contacto", "label": "Contacto" }
+    ]
+  },
+  "whatsapp": {
+    "message": "Hola Varena! Quiero hacer una consulta.",
+    "label": "Contactar por WhatsApp"
+  }
+}

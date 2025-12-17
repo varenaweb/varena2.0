@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "title": "Services | Varena",
+    "description": "Explore Varena's services: single-offer landings, full business websites, and online stores designed with clarity, personal attention, and practical results.",
+    "langLabel": "EN"
+  },
+  "nav": {
+    "logoHref": "/en/services",
+    "items": [
+      { "href": "/en", "label": "Home" },
+      { "href": "/en/services", "label": "Services" },
+      { "href": "/en/plans", "label": "Plans" },
+      { "href": "/en#faq", "label": "FAQ" },
+      { "href": "/en/contact", "label": "Contact", "cta": true }
+    ]
+  },
+  "hero": {
+    "anchorId": "services",
+    "kicker": "Services",
+    "title": "Three ways to work your online presence",
+    "description": "A landing, a full business website or an online store? Varena adapts to your current needs with a clear, professional and easy-to-use approach."
+  },
+  "cards": [
+    {
+      "title": "Single-offer page (landing)",
+      "text": "One concise page for a flagship service, course or campaign with a single clear objective: help visitors understand your offer and know what to do next.",
+      "list": [
+        "Typical structure: problem, solution, benefits, proof, FAQ and contact.",
+        "Perfect for driving traffic from ads, social media or email.",
+        "Includes WhatsApp button, contact form and social links.",
+        "Optimised design for fast loading on every device.",
+        "SEO-friendly set up so Google understands your offer."
+      ]
+    },
+    {
+      "title": "Business website",
+      "text": "Your main online space with multiple sections to show who you are, what you offer, how you work and how to book you.",
+      "list": [
+        "Home plus key sections like About, Services, FAQ and Contact.",
+        "We help organise content and write clear copy.",
+        "Includes WhatsApp button, contact form and social links.",
+        "Responsive design that works on every screen size.",
+        "Structured so you can grow it later with more pages."
+      ]
+    },
+    {
+      "title": "Online store / e-commerce",
+      "text": "For businesses that want to show products and sell directly from their website with an organised catalog and smooth buying flow.",
+      "list": [
+        "Product catalog with photos, descriptions and pricing.",
+        "Cart and checkout with payment and shipping options.",
+        "SEO-ready structure with clean URLs and clear titles.",
+        "Mobile-friendly design for comfortable shopping.",
+        "Quick training so you can manage products yourself."
+      ]
+    }
+  ],
+  "common": {
+    "kicker": "What’s included",
+    "title": "What all projects have in common",
+    "description": "Regardless of the project type, every Varena website shares focus on clarity, personal attention and usefulness.",
+    "cards": [
+      {
+        "title": "Connected to your channels",
+        "list": [
+          "WhatsApp button so enquiries go straight to your preferred number.",
+          "A simple contact form tied to your inbox.",
+          "Links to your main social networks."
+        ]
+      },
+      {
+        "title": "Design and user experience",
+        "list": [
+          "Responsive design that looks great on phone, tablet and desktop.",
+          "Ordered sections that guide visitors step by step.",
+          "Visual language tailored to your brand voice."
+        ]
+      },
+      {
+        "title": "SEO and going live",
+        "list": [
+          "Initial SEO configuration (titles, descriptions, technical basics).",
+          "Support choosing and configuring domain + hosting (provider costs separate).",
+          "Final checks before publishing."
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Websites that work for you.",
+    "links": [
+      { "href": "/en", "label": "Home" },
+      { "href": "/en/services", "label": "Services" },
+      { "href": "/en/plans", "label": "Plans" },
+      { "href": "/en/contact", "label": "Contact" }
+    ]
+  },
+  "whatsapp": {
+    "message": "Hi Varena! I'd like to talk about my website project.",
+    "label": "Contact via WhatsApp"
+  }
+}

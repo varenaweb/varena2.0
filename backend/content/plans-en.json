@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "Plans and pricing | Varena",
+    "description": "Reference plans for landing pages, business sites and online stores. Pay in ARS or USD with responsive design and SEO-ready setup.",
+    "langLabel": "EN"
+  },
+  "nav": {
+    "logoHref": "/en/plans",
+    "items": [
+      { "href": "/en", "label": "Home" },
+      { "href": "/en/services", "label": "Services" },
+      { "href": "/en/plans", "label": "Plans" },
+      { "href": "/en#faq", "label": "FAQ" },
+      { "href": "/en/contact", "label": "Contact", "cta": true }
+    ]
+  },
+  "hero": {
+    "anchorId": "plans",
+    "kicker": "Plans",
+    "title": "Options and investment ranges",
+    "description": "Reference prices show the typical investment per project type. Final budgets depend on scope and specific needs. Payments are usually split: 50% on start, 50% on delivery."
+  },
+  "plans": {
+    "cards": [
+      {
+        "label": "Landing",
+        "title": "Plans for a single-offer page",
+        "linearClass": "",
+        "main": "For campaigns, launches or focused services.",
+        "list": [
+          "Clear landing with ordered blocks leading to one action.",
+          "Designed to generate enquiries, bookings or sign-ups.",
+          "Includes WhatsApp button, contact form and social links.",
+          "Adapted to phone, tablet and desktop."
+        ],
+        "note": "Your landing goes live ready to publish: design, build, SEO setup and launch.",
+        "price": {
+          "ars": "$ 350.000",
+          "usd": "USD 220"
+        }
+      },
+      {
+        "label": "Website",
+        "title": "Plans for a business website",
+        "linearClass": "plan-card-highlight",
+        "main": "For studios, consultancies and personal brands that need a stable online hub.",
+        "list": [
+          "Homepage plus internal sections (About, Services, FAQ, Contact).",
+          "Support for organising content and writing clear copy.",
+          "Includes WhatsApp button, contact form and social links.",
+          "Design tuned for all screen sizes."
+        ],
+        "note": "Built as your digital hub: a reliable place to present your work.",
+        "price": {
+          "ars": "$ 600.000",
+          "usd": "USD 380"
+        }
+      },
+      {
+        "label": "E-commerce",
+        "title": "Plans for online stores / e-commerce",
+        "linearClass": "",
+        "main": "For selling products or services directly from your site.",
+        "list": [
+          "Organised product catalog with photos, descriptions and pricing.",
+          "Checkout flow with payment and shipping options.",
+          "SEO-friendly structure so you can grow later.",
+          "Optimised design for mobile shopping."
+        ],
+        "note": "Ideal to move from a showcase to an actual store with detailed options.",
+        "price": {
+          "ars": "$ 1.000.000",
+          "usd": "USD 650"
+        }
+      }
+    ],
+    "disclaimer": "*Reference values. Final budgets depend on scope, section count and project needs."
+  },
+  "payment": {
+    "kicker": "Payment",
+    "title": "Payment methods and currencies",
+    "cards": [
+      {
+        "title": "Argentine pesos (ARS)",
+        "text": "Ideal if you’re based in Argentina and prefer to pay locally.",
+        "list": [
+          "Bank transfer in pesos.",
+          "Payment through Mercado Pago."
+        ]
+      },
+      {
+        "title": "US dollars (USD)",
+        "text": "For clients who work primarily in dollars.",
+        "list": [
+          "Zelle (USA).",
+          "Bank transfer to Banco Pichincha (Ecuador)."
+        ]
+      }
+    ],
+    "process": {
+      "kicker": "How payment works",
+      "title": "Two-part payment structure",
+      "description": "We usually work with two instalments: 50% when we start (reserving slot + building structure) and 50% on delivery when the site is published."
+    }
+  },
+  "footer": {
+    "tagline": "Websites that work for you.",
+    "links": [
+      { "href": "/en", "label": "Home" },
+      { "href": "/en/services", "label": "Services" },
+      { "href": "/en/plans", "label": "Plans" },
+      { "href": "/en/contact", "label": "Contact" }
+    ]
+  },
+  "whatsapp": {
+    "message": "Hi Varena! I'd like to talk about my website project.",
+    "label": "Contact via WhatsApp"
+  }
+}

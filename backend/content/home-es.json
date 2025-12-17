@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "title": "Varena | Diseño y desarrollo de páginas web",
+    "description": "Varena es un estudio de diseño web que crea páginas claras, profesionales y optimizadas para SEO para emprendedores, profesionales independientes y negocios locales.",
+    "langLabel": "ES"
+  },
+  "nav": {
+    "logoHref": "/",
+    "items": [
+      {
+        "href": "/",
+        "label": "Inicio"
+      },
+      {
+        "href": "/servicios",
+        "label": "Servicios"
+      },
+      {
+        "href": "/planes",
+        "label": "Planes"
+      },
+      {
+        "href": "/#faq",
+        "label": "Preguntas"
+      },
+      {
+        "href": "/contacto",
+        "label": "Contacto",
+        "cta": true
+      }
+    ]
+  },
+  "hero": {
+    "anchorId": "inicio",
+    "kicker": "Estudio de diseño y desarrollo de páginas web",
+    "subtitle": "Creamos webs claras, rápidas y profesionales, pensadas para que tus clientes entiendan en segundos quién sos, qué hacés y cómo contactarte, sin vueltas.",
+    "list": [
+      "Para profesionales independientes, emprendimientos y pequeños negocios.",
+      "Adaptadas a celular, tablet y computadora, con carga rápida y barajadas para SEO.",
+      "Incluyen botón de WhatsApp, formulario de contacto y enlaces a tus redes sociales.",
+      "Sin plantillas genéricas: estructura y textos pensados para tu caso."
+    ],
+    "buttons": {
+      "primary": "Quiero cotizar mi web",
+      "primaryHref": "#contacto",
+      "secondary": "Ver planes",
+      "secondaryHref": "#planes"
+    },
+    "note": "Contanos brevemente qué necesitás y te proponemos la opción más razonable para tu etapa actual.",
+    "badges": [
+      "Profesionales independientes",
+      "Negocios locales y estudios",
+      "Emprendimientos y marcas personales"
+    ]
+  },
+  "services": {
+    "anchorId": "servicios",
+    "kicker": "Servicios",
+    "title": "Tres formas de trabajar tu presencia online",
+    "description": "Podés necesitar una página para una sola oferta, un sitio completo para tu negocio o una tienda online para vender tus productos. Varena se adapta a lo que necesitás hoy con tu presencia online.",
+    "cards": [
+      {
+        "priceIds": {
+          "ars": "price-landing-ars",
+          "usd": "price-landing-usd"
+        },
+        "title": "Página para una sola oferta (landing)",
+        "text": "Una página única, pensada para un servicio estrella, un curso o una campaña puntual, con un objetivo claro: que la gente entienda tu propuesta y sepa qué hacer después.",
+        "list": [
+          "Estructura típica de landing: problema, propuesta, beneficios, CTA y contacto.",
+          "Incluye botón de WhatsApp, formulario de contacto y enlaces a redes sociales.",
+          "Configurada para cargar rápido y ayudar a que Google entienda tu servicio."
+        ]
+      },
+      {
+        "priceIds": {
+          "ars": "price-web-ars",
+          "usd": "price-web-usd"
+        },
+        "title": "Página web para tu negocio",
+        "text": "Tu sitio principal, con alrededor de cinco páginas para presentar quién sos, qué hacés, cómo trabajás y cómo contactarte, todo en un solo lugar confiable al que puedas mandar a tus clientes.",
+        "list": [
+          "Inicio + hasta 5 secciones clave (sobre nosotros, servicios, preguntas frecuentes, contacto, etc.).",
+          "Textos trabajados para mayor claridad, confianza y mejor presencia en buscadores (SEO).",
+          "Incluye botón de WhatsApp, formulario de contacto y enlaces a redes."
+        ]
+      },
+      {
+        "priceIds": {
+          "ars": "price-ecommerce-ars",
+          "usd": "price-ecommerce-usd"
+        },
+        "title": "Tienda online / e-commerce",
+        "text": "Para negocios que quieren mostrar productos y vender directamente desde su web, con un catálogo ordenado y un proceso de compra claro.",
+        "list": [
+          "Catálogo de productos con fotos, descripciones y precios.",
+          "Carrito y checkout básico con medios de pago y envío definidos.",
+          "Estructura pensada para SEO y para que tus clientes puedan comprar fácilmente también desde el celular."
+        ]
+      }
+    ],
+    "common": {
+      "kicker": "Qué incluyen",
+      "title": "Lo que tienen en común todos los proyectos",
+      "description": "Más allá del tipo de página que elijas, todas las webs que hacemos en Varena comparten una base en común: claridad, buen trato y foco en que puedas usar la página en tu día a día.",
+      "cards": [
+        {
+          "title": "Conectada con tus canales",
+          "list": [
+            "Botón de WhatsApp integrado para recibir consultas directas.",
+            "Formulario de contacto sencillo, conectado a tu correo.",
+            "Enlaces a tus principales redes sociales."
+          ]
+        },
+        {
+          "title": "Diseño y experiencia de uso",
+          "list": [
+            "Diseño optimizado para verse bien en celular, tablet y computadora.",
+            "Estructura de bloques ordenados para facilitar la lectura.",
+            "Estilo visual alineado con tu marca y tu forma de comunicar."
+          ]
+        },
+        {
+          "title": "SEO y publicación",
+          "list": [
+            "Configuración inicial orientada a SEO (títulos, descripciones y estructura técnica básica).",
+            "Asistencia en la configuración de dominio y hosting (el costo de esos servicios se abona por separado).",
+            "Publicación de la web y verificación final de que todo está funcionando correctamente."
+          ]
+        }
+      ]
+    }
+  },
+  "plans": {
+    "anchorId": "planes",
+    "kicker": "Planes",
+    "title": "Opciones y rangos de inversión",
+    "description": "Podés pagar en pesos argentinos mediante transferencia o Mercado Pago, o en USD a través de Zelle y Banco Pichincha. El valor final se ajusta según el alcance de cada proyecto.",
+    "cards": [
+      {
+        "label": "Landing",
+        "title": "Planes para página de una sola oferta",
+        "main": "Para campañas, lanzamientos o servicios puntuales.",
+        "list": [
+          "Landing clara, con bloques ordenados que llevan a una acción principal.",
+          "Enfoque en generar consultas, reservas o registros sin distraer al usuario.",
+          "Incluye botón de WhatsApp, formulario de contacto y enlaces a redes sociales.",
+          "Diseño optimizado para verse bien en celular, tablet y computadora."
+        ],
+        "note": "Tu landing queda lista para publicar (diseño, maquetado, configuración de SEO y puesta en línea inicial)."
+      },
+      {
+        "label": "Página web",
+        "title": "Planes para sitio web de tu negocio",
+        "main": "Para estudios, consultorios y marcas personales que necesitan un lugar propio online.",
+        "list": [
+          "Inicio + hasta 5 páginas internas (sobre nosotros, servicios, preguntas frecuentes y contacto).",
+          "Acompañamiento en la organización de contenidos y redacción de textos claros para personas y buscadores.",
+          "Incluye botón de WhatsApp, formulario de contacto, enlaces a redes.",
+          "Diseño optimizado para distintos dispositivos."
+        ],
+        "note": "Pensado como tu centro online. Ver más detalles de los planes de página web."
+      },
+      {
+        "label": "E-commerce",
+        "title": "Planes para tienda online / E-commerce",
+        "main": "Ideal si querés que tu web deje de ser solo una vidriera y empiece a vender.",
+        "list": [
+          "Catálogo organizado de productos (fotos, descripciones, precios).",
+          "Carrito y proceso de checkout con medios de pago y envío definidos.",
+          "Preparada para que puedas agregar o actualizar productos después.",
+          "Diseño optimizado para celulares y computadoras."
+        ],
+        "note": "Perfecta si querés vender directo desde tu web y mantener la carga visual cuidada."
+      }
+    ],
+    "disclaimer": "Valores orientativos. El presupuesto final se define según el alcance concreto, la cantidad de secciones y las necesidades de cada proyecto."
+  },
+  "payment": {
+    "anchorId": "medios-pago",
+    "kicker": "Medios de pago",
+    "title": "Cómo podés abonar tu proyecto",
+    "description": "Podés contratar tu página web pagando en pesos argentinos o en dólares estadounidenses. Trabajamos con opciones simples y conocidas para que el pago sea lo menos complicado.",
+    "cards": [
+      {
+        "title": "Pesos argentinos (ARS)",
+        "text": "Ideal si estás en Argentina y preferís abonar directamente en pesos.",
+        "list": [
+          "Transferencia bancaria en pesos.",
+          "Pago mediante Mercado Pago."
+        ]
+      },
+      {
+        "title": "Dólares estadounidenses (USD)",
+        "text": "Si manejás dólares, podés abonar el proyecto directamente en USD.",
+        "list": [
+          "Pago mediante Zelle (EEUU).",
+          "Transferencia bancaria a Banco Pichincha (Ecuador)."
+        ]
+      }
+    ]
+  },
+  "process": {
+    "anchorId": "proceso",
+    "kicker": "Proceso",
+    "title": "Cómo trabajamos tu web, paso a paso",
+    "description": "Tenemos un proceso simple, pensado para que sepas qué está pasando en cada etapa, con contacto directo por WhatsApp para dudas y ajustes.",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Contacto y contexto",
+        "text": "Nos contás qué hacés, a quién atendés y qué te gustaría lograr con tu web. Empezamos la conversación por correo o WhatsApp."
+      },
+      {
+        "number": "2",
+        "title": "Mapa de la web",
+        "text": "Definimos secciones, estructura y mensajes principales. Ordenamos la información como una conversación entre vos y tu cliente ideal."
+      },
+      {
+        "number": "3",
+        "title": "Diseño y armado",
+        "text": "Diseñamos y construimos la web respetando tu marca, cuidando que se vea bien, cargue rápido y esté lista para SEO."
+      },
+      {
+        "number": "4",
+        "title": "Revisión y publicación",
+        "text": "Revisamos juntos, ajustamos textos y publicamos la web en tu dominio. Te dejamos una guía básica para cambios futuros."
+      }
+    ]
+  },
+  "faq": {
+    "anchorId": "faq",
+    "kicker": "Preguntas frecuentes",
+    "title": "Dudas comunes antes de hacer una web",
+    "items": [
+      {
+        "question": "¿Necesito tener todos los textos listos antes de empezar?",
+        "answer": "No. Podés traer borradores, ideas sueltas o textos que ya uses, y los trabajamos juntos. Parte del servicio es ayudarte a ordenar y simplificar la información."
+      },
+      {
+        "question": "¿Tengo que tener logo y fotos profesionales?",
+        "answer": "Si ya tenés logo y fotos, los usamos y adaptamos. Si no, podemos arrancar con un diseño tipográfico simple mientras definimos imágenes propias."
+      },
+      {
+        "question": "¿Cuánto tiempo lleva tener la web lista?",
+        "answer": "Depende del alcance. Una landing simple puede estar lista en tres días desde que definimos el mapa y los textos."
+      },
+      {
+        "question": "¿Voy a poder hacer pequeños cambios yo mismo?",
+        "answer": "La idea es que no dependas de otra persona para cada detalle menor. Te dejamos una guía básica para actualizar textos sencillos."
+      },
+      {
+        "question": "¿Incluye dominio, hosting, correo, etc.?",
+        "answer": "Te acompañamos a elegir y configurar dominio y hosting. El servicio de Varena se concentra en diseño y construcción, más la configuración inicial."
+      }
+    ]
+  },
+  "about": {
+    "anchorId": "sobre-mi",
+    "kicker": "Sobre Varena",
+    "title": "Un estudio pequeño, un equipo atento a los detalles",
+    "paragraphs": [
+      "Varena es un estudio de diseño web formado por un equipo chico. Eso significa trato directo, comunicación simple y tiempo para entender cómo trabajás.",
+      "Nuestro enfoque no es llenar la web de efectos ni tecnicismos, sino traducir lo que ya hacés bien al lenguaje de internet: bloques ordenados, textos concretos y un botón claro para el siguiente paso."
+    ],
+    "aside": {
+      "name": "Varena",
+      "tagline": "Tu página web, trabajando por vos.",
+      "note": "Webs claras y profesionales para personas y negocios que quieren mostrar mejor su trabajo sin perder su estilo."
+    }
+  },
+  "contact": {
+    "anchorId": "contacto",
+    "kicker": "Contacto",
+    "title": "¿Hablamos de tu web?",
+    "description": "Dejá tus datos y un breve resumen. Te respondemos para ver si tiene sentido trabajar juntos y qué proyecto encaja mejor con lo que necesitás ahora.",
+    "promptsTitle": "Podés comentar, por ejemplo:",
+    "promptsList": [
+      "Qué hacés y a quién atendés.",
+      "Si ya tenés web o estás empezando desde cero.",
+      "Qué te gustaría que cambie gracias a una página bien hecha.",
+      "Si pensás en una landing puntual, un sitio completo o una tienda online."
+    ],
+    "hint": "El mensaje inicial no es un compromiso de compra. Es una primera charla para entender tu caso y ver si somos una buena opción. Después seguimos por correo o WhatsApp.",
+    "formNameLabel": "Nombre y apellido",
+    "formNamePlaceholder": "Cómo te llamás",
+    "formEmailLabel": "Correo electrónico",
+    "formProjectLabel": "Tipo de proyecto",
+    "formProjectSelect": "Seleccioná una opción",
+    "projectOptions": {
+      "landing": "Landing puntual",
+      "web_full": "Sitio completo",
+      "ecommerce": "Tienda online / e-commerce",
+      "other": "No estoy seguro todavía"
+    },
+    "formContextLabel": "Negocio / proyecto",
+    "formContextPlaceholder": "Ej: estudio, consultorio, marca personal",
+    "formMessageLabel": "Contame un poco más",
+    "formMessagePlaceholder": "Contame brevemente qué hacés, a quién atendés y qué te gustaría lograr con tu página web.",
+    "formSubmitLabel": "Enviar mensaje"
+  },
+  "footer": {
+    "tagline": "Tu página web, trabajando por vos.",
+    "links": [
+      {
+        "href": "#inicio",
+        "label": "Inicio"
+      },
+      {
+        "href": "#servicios",
+        "label": "Servicios"
+      },
+      {
+        "href": "#planes",
+        "label": "Planes"
+      },
+      {
+        "href": "#contacto",
+        "label": "Contacto"
+      }
+    ]
+  },
+  "whatsapp": {
+    "message": "Hola Varena! Quiero hacer una consulta.",
+    "label": "Contactar por WhatsApp"
+  }
+}

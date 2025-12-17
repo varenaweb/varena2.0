@@ -1,0 +1,56 @@
+<%- include("partials/head") %>
+<%- include("partials/header") %>
+
+<main>
+  <!-- HERO -->
+  <section id="<%= strings.hero.anchorId %>" class="section section-alt">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-kicker"><%= strings.hero.kicker %></p>
+        <h1 class="section-title"><%= strings.hero.title %></h1>
+        <p class="section-description"><%= strings.hero.description %></p>
+      </header>
+
+      <div class="services-grid">
+        <% strings.cards.forEach(card => { %>
+          <article class="service-card">
+            <h2 class="service-title"><%= card.title %></h2>
+            <p class="service-text"><%= card.text %></p>
+            <ul class="service-list">
+              <% card.list.forEach(item => { %>
+                <li><%= item %></li>
+              <% }) %>
+            </ul>
+          </article>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ INCLUYEN -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-kicker"><%= strings.common.kicker %></p>
+        <h2 class="section-title"><%= strings.common.title %></h2>
+        <p class="section-description"><%= strings.common.description %></p>
+      </header>
+
+      <div class="services-grid">
+        <% strings.common.cards.forEach(card => { %>
+          <article class="service-card">
+            <h3 class="service-title"><%= card.title %></h3>
+            <ul class="service-list">
+              <% card.list.forEach(item => { %>
+                <li><%= item %></li>
+              <% }) %>
+            </ul>
+          </article>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include("partials/whatsapp") %>
+<%- include("partials/footer") %>

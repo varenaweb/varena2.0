@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Contact | Varena",
+    "description": "Tell us about your website project. We respond quickly to see if a landing, full site or shop suits your needs.",
+    "langLabel": "EN"
+  },
+  "nav": {
+    "logoHref": "/en/contact",
+    "items": [
+      { "href": "/en", "label": "Home" },
+      { "href": "/en/services", "label": "Services" },
+      { "href": "/en/plans", "label": "Plans" },
+      { "href": "/en/contact", "label": "Contact", "cta": true }
+    ]
+  },
+  "hero": {
+    "anchorId": "contact",
+    "kicker": "Contact",
+    "title": "Shall we talk about your website?",
+    "description": "Leave your details and tell us about your project. We'll reply to explore if working together makes sense and what format fits best."
+  },
+  "prompts": {
+    "title": "You can mention, for example:",
+    "items": [
+      "What you do and who you work with.",
+      "If you already have a website or you're starting from scratch.",
+      "What you'd like to change with a better site.",
+      "Whether you're thinking about a landing, a full site or an online store."
+    ]
+  },
+  "hint": "Your first message is not a commitment. It's a conversation to see if we are a good fit.",
+  "contactForm": {
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "projectType": "Project type",
+      "projectContext": "Business / project",
+      "message": "Tell us a bit more",
+      "submit": "Send message"
+    },
+    "projectOptions": {
+      "landing": "Landing page",
+      "web_full": "Full website",
+      "ecommerce": "Online store / e-commerce",
+      "other": "Not sure yet"
+    },
+    "projectOptionsSelect": "Choose an option",
+    "placeholders": {
+      "name": "Your name",
+      "projectContext": "E.g. studio, practice, personal brand",
+      "message": "Briefly explain what you do and what you'd like the website to achieve."
+    }
+  },
+  "footer": {
+    "tagline": "Websites that work for you.",
+    "links": [
+      { "href": "/en", "label": "Home" },
+      { "href": "/en/services", "label": "Services" },
+      { "href": "/en/plans", "label": "Plans" },
+      { "href": "/en/contact", "label": "Contact" }
+    ]
+  },
+  "whatsapp": {
+    "message": "Hi Varena! I'd like to talk about my website project.",
+    "label": "Contact via WhatsApp"
+  }
+}

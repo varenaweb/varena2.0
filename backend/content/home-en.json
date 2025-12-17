@@ -1,0 +1,299 @@
+{
+  "meta": {
+    "title": "Varena | Web design and development",
+    "description": "Varena is a small web studio that builds clear, fast and professional websites for freelancers, local businesses and personal brands.",
+    "langLabel": "EN"
+  },
+  "nav": {
+    "logoHref": "/en",
+    "items": [
+      { "href": "/en", "label": "Home" },
+      { "href": "/en/services", "label": "Services" },
+      { "href": "/en/plans", "label": "Plans" },
+      { "href": "/en#faq", "label": "FAQ" },
+      { "href": "/en/contact", "label": "Contact", "cta": true }
+    ]
+  },
+  "hero": {
+    "anchorId": "home",
+    "kicker": "Web design and development studio",
+    "subtitle": "We build clear, fast and professional websites so your clients understand in seconds who you are, what you do and how to reach you.",
+    "list": [
+      "For freelancers, entrepreneurs and local businesses.",
+      "Adapted to phone, tablet and desktop, with fast loading and SEO in mind.",
+      "Includes WhatsApp button, contact form and links to your social profiles.",
+      "No generic templates – structure and copy tailored to your case."
+    ],
+    "buttons": {
+      "primary": "I want to quote my website",
+      "primaryHref": "#contact",
+      "secondary": "View plans",
+      "secondaryHref": "#plans"
+    },
+    "note": "Tell us briefly what you need and we’ll propose the most reasonable option for your stage.",
+    "badges": [
+      "Freelancers and studios",
+      "Local businesses and practices",
+      "Personal brands and creatives"
+    ]
+  },
+  "services": {
+    "anchorId": "services",
+    "kicker": "Services",
+    "title": "Three ways to work your online presence",
+    "description": "You might need a single-offer page, a full business website or an online store. Varena adapts to what you need today with your online presence.",
+    "cards": [
+      {
+        "priceIds": {
+          "ars": "price-landing-ars",
+          "usd": "price-landing-usd"
+        },
+        "title": "Single-offer page (landing)",
+        "text": "A single page designed for a flagship service, a course or a campaign, with a clear goal: help people understand your offer and know what to do next.",
+        "list": [
+          "Typical landing structure: problem, proposal, benefits, CTA and contact.",
+          "Ready to send traffic from ads, social or email campaigns.",
+          "Includes WhatsApp button, contact form and social links."
+        ]
+      },
+      {
+        "priceIds": {
+          "ars": "price-web-ars",
+          "usd": "price-web-usd"
+        },
+        "title": "Business website",
+        "text": "Your main online space, with around five pages to explain who you are, what you offer, how you work and how to book you.",
+        "list": [
+          "Homepage + up to 5 sections like about, services, FAQ and contact.",
+          "Support organizing content and writing clear copy for people and search engines.",
+          "Includes WhatsApp button, contact form and social links."
+        ]
+      },
+      {
+        "priceIds": {
+          "ars": "price-ecommerce-ars",
+          "usd": "price-ecommerce-usd"
+        },
+        "title": "Online store / e-commerce",
+        "text": "For businesses that want to show products and sell directly from the website, with an organized catalog and a clear buying flow.",
+        "list": [
+          "Product catalog with photos, descriptions and pricing.",
+          "Cart and checkout with payment methods and shipping defined.",
+          "Structure ready for SEO and purchase-friendly on mobile."
+        ]
+      }
+    ],
+    "common": {
+      "kicker": "What’s included",
+      "title": "What all projects have in common",
+      "description": "No matter which project type you choose, every Varena website shares the same base: clarity, direct communication and practical results.",
+      "cards": [
+        {
+          "title": "Connected to your channels",
+          "list": [
+            "WhatsApp button integrated for direct messages.",
+            "Simple contact form connected to your inbox.",
+            "Links to your social networks."
+          ]
+        },
+        {
+          "title": "Design and experience",
+          "list": [
+            "Design optimized for phone, tablet and desktop.",
+            "Ordered sections that guide your visitors.",
+            "Visual language aligned with your brand."
+          ]
+        },
+        {
+          "title": "SEO and publishing",
+          "list": [
+            "Initial SEO setup (titles, descriptions, technical basics).",
+            "Help configuring domain and hosting (those costs are separate).",
+            "Website published and double-checked before launch."
+          ]
+        }
+      ]
+    }
+  },
+  "plans": {
+    "anchorId": "plans",
+    "kicker": "Plans",
+    "title": "Options and investment ranges",
+    "description": "You can pay in Argentine pesos via bank transfer or Mercado Pago, or in USD through Zelle or Banco Pichincha. Final budget depends on scope.",
+    "cards": [
+      {
+        "label": "Landing",
+        "title": "Single-offer page plans",
+        "main": "For launches, campaigns or standout services.",
+        "list": [
+          "Clear landing with blocks that guide visitors to the main action.",
+          "Focused on generating inquiries, bookings or signups.",
+          "Includes WhatsApp button, contact form and social links.",
+          "Design optimized for cell phones, tablets and desktops."
+        ],
+        "note": "Your landing ships ready to publish (design, polish, SEO setup and initial launch)."
+      },
+      {
+        "label": "Website",
+        "title": "Business website plans",
+        "main": "For studios, consultancies and brands who need a reliable online HQ.",
+        "list": [
+          "Homepage + up to 5 internal pages (about, services, FAQ, contact).",
+          "Support organizing content and writing concise copy.",
+          "Includes WhatsApp button, contact form, social links.",
+          "Design tuned for multi-device responsiveness."
+        ],
+        "note": "Built to become your central online space."
+      },
+      {
+        "label": "E-commerce",
+        "title": "Online store plans",
+        "main": "Perfect if you want to sell directly from your web presence.",
+        "list": [
+          "Organized product catalog (photos, details, pricing).",
+          "Cart and checkout with payments and shipping set up.",
+          "Ready for you to add and update products afterward.",
+          "Design optimized for smooth mobile shopping."
+        ],
+        "note": "Ready for your brand to sell products with a clean look."
+      }
+    ],
+    "disclaimer": "Prices are orientative. Final quote depends on scope, number of sections and special requirements."
+  },
+  "payment": {
+    "anchorId": "payment",
+    "kicker": "Payment",
+    "title": "How you can pay for your project",
+    "description": "You can hire your website paying in ARS or USD. We keep the payment options simple so the process is convenient.",
+    "cards": [
+      {
+        "title": "Argentine pesos (ARS)",
+        "text": "Ideal if you’re in Argentina and prefer to pay locally.",
+        "list": [
+          "Bank transfer in pesos.",
+          "Mercado Pago."
+        ]
+      },
+      {
+        "title": "US dollars (USD)",
+        "text": "If you operate with dollars, you can pay directly in USD.",
+        "list": [
+          "Zelle (USA).",
+          "Banco Pichincha (Ecuador)."
+        ]
+      }
+    ]
+  },
+  "process": {
+    "anchorId": "process",
+    "kicker": "Process",
+    "title": "How we build your website, step by step",
+    "description": "We keep a simple process so you know exactly what’s happening, with direct WhatsApp contact for updates and questions.",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Contact and context",
+        "text": "Tell us what you do, who you serve and what you’d like your website to achieve."
+      },
+      {
+        "number": "2",
+        "title": "Website map",
+        "text": "We define sections, structure and key messages — as if we were talking directly to your ideal client."
+      },
+      {
+        "number": "3",
+        "title": "Design and build",
+        "text": "We design and build respecting your brand, fast loading and SEO readiness."
+      },
+      {
+        "number": "4",
+        "title": "Review and launch",
+        "text": "We review together, tweak copy and publish on your domain with a quick handoff guide."
+      }
+    ]
+  },
+  "faq": {
+    "anchorId": "faq",
+    "kicker": "FAQ",
+    "title": "Common questions before making a website",
+    "items": [
+      {
+        "question": "Do I need to have all the copy ready before we start?",
+        "answer": "No. Bring drafts or notes and we can work through them together."
+      },
+      {
+        "question": "Do I need a professional logo and photos?",
+        "answer": "If you have them, great. If not, we can start with simple typographic design and placeholders."
+      },
+      {
+        "question": "How long does it take?",
+        "answer": "It depends on scope. A simple landing can be ready in three days after we finalize the map and copy."
+      },
+      {
+        "question": "Will I be able to update small things myself?",
+        "answer": "Yes, we provide a basic guide so you can edit simple text or swap sections later."
+      },
+      {
+        "question": "Does this include domain, hosting and email?",
+        "answer": "We guide you choosing and configuring those services, but their cost is separate."
+      }
+    ]
+  },
+  "about": {
+    "anchorId": "about",
+    "kicker": "About Varena",
+    "title": "A small studio that cares about details",
+    "paragraphs": [
+      "Varena is a small web studio with a tight-knit team. That means direct communication and time to understand how you work.",
+      "We avoid unnecessary effects and technical jargon, focusing on translating your work into ordered blocks and clear copy."
+    ],
+    "aside": {
+      "name": "Varena",
+      "tagline": "Websites that work for you.",
+      "note": "Clear, professional websites for people and businesses who want to showcase their work without losing their own voice."
+    }
+  },
+  "contact": {
+    "anchorId": "contact",
+    "kicker": "Contact",
+    "title": "Shall we talk about your website?",
+    "description": "Leave your details and a short summary. We'll reply to see if working together makes sense and which format fits best.",
+    "promptsTitle": "You can mention, for example:",
+    "promptsList": [
+      "What you do and who you work with.",
+      "If you already have a website or are starting from scratch.",
+      "What you'd like to change thanks to a well-built site.",
+      "Whether you are thinking about a landing, a full site or an online store."
+    ],
+    "hint": "Your first message is not a commitment. It’s a conversation to understand if we’re a good fit. Then we continue via email or WhatsApp.",
+    "formNameLabel": "Name",
+    "formNamePlaceholder": "Your name",
+    "formEmailLabel": "Email",
+    "formProjectLabel": "Project type",
+    "formProjectSelect": "Choose an option",
+    "projectOptions": {
+      "landing": "Landing page",
+      "web_full": "Full website",
+      "ecommerce": "Online store / e-commerce",
+      "other": "Not sure yet"
+    },
+    "formContextLabel": "Business / project",
+    "formContextPlaceholder": "E.g. studio, practice, personal brand",
+    "formMessageLabel": "Tell us a bit more",
+    "formMessagePlaceholder": "Briefly tell us what you do, who you work with and what you’d like your website to help you achieve.",
+    "formSubmitLabel": "Send message"
+  },
+  "footer": {
+    "tagline": "Websites that work for you.",
+    "links": [
+      { "href": "#home", "label": "Home" },
+      { "href": "#services", "label": "Services" },
+      { "href": "#plans", "label": "Plans" },
+      { "href": "#contact", "label": "Contact" }
+    ]
+  },
+  "whatsapp": {
+    "message": "Hi Varena! I'd like to talk about my website project.",
+    "label": "Contact via WhatsApp"
+  }
+}
