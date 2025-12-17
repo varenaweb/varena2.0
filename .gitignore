@@ -1,4 +1,6 @@
 node_modules/
 .env
+.envexample
+.env.example
 npm-debug.log*
 yarn-error.log*
