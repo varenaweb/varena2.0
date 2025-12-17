@@ -147,7 +147,11 @@
           "Incluye botón de WhatsApp, formulario de contacto y enlaces a redes sociales.",
           "Diseño optimizado para verse bien en celular, tablet y computadora."
         ],
-        "note": "Tu landing queda lista para publicar (diseño, maquetado, configuración de SEO y puesta en línea inicial)."
+        "note": "Tu landing queda lista para publicar (diseño, maquetado, configuración de SEO y puesta en línea inicial).",
+        "price": {
+          "ars": "$ 150.000",
+          "usd": "USD 100"
+        }
       },
       {
         "label": "Página web",
@@ -159,7 +163,11 @@
           "Incluye botón de WhatsApp, formulario de contacto, enlaces a redes.",
           "Diseño optimizado para distintos dispositivos."
         ],
-        "note": "Pensado como tu centro online. Ver más detalles de los planes de página web."
+        "note": "Pensado como tu centro online. Ver más detalles de los planes de página web.",
+        "price": {
+          "ars": "$ 450.000",
+          "usd": "USD 300"
+        }
       },
       {
         "label": "E-commerce",
@@ -171,7 +179,11 @@
           "Preparada para que puedas agregar o actualizar productos después.",
           "Diseño optimizado para celulares y computadoras."
         ],
-        "note": "Perfecta si querés vender directo desde tu web y mantener la carga visual cuidada."
+        "note": "Perfecta si querés vender directo desde tu web y mantener la carga visual cuidada.",
+        "price": {
+          "ars": "$ 1.000.000",
+          "usd": "USD 650"
+        }
       }
     ],
     "disclaimer": "Valores orientativos. El presupuesto final se define según el alcance concreto, la cantidad de secciones y las necesidades de cada proyecto."

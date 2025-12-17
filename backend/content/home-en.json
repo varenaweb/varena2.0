@@ -131,7 +131,11 @@
           "Includes WhatsApp button, contact form and social links.",
           "Design optimized for cell phones, tablets and desktops."
         ],
-        "note": "Your landing ships ready to publish (design, polish, SEO setup and initial launch)."
+        "note": "Your landing ships ready to publish (design, polish, SEO setup and initial launch).",
+        "price": {
+          "ars": "$ 350,000",
+          "usd": "USD 220"
+        }
       },
       {
         "label": "Website",
@@ -143,7 +147,11 @@
           "Includes WhatsApp button, contact form, social links.",
           "Design tuned for multi-device responsiveness."
         ],
-        "note": "Built to become your central online space."
+        "note": "Built to become your central online space.",
+        "price": {
+          "ars": "$ 600,000",
+          "usd": "USD 380"
+        }
       },
       {
         "label": "E-commerce",
@@ -155,7 +163,11 @@
           "Ready for you to add and update products afterward.",
           "Design optimized for smooth mobile shopping."
         ],
-        "note": "Ready for your brand to sell products with a clean look."
+        "note": "Ready for your brand to sell products with a clean look.",
+        "price": {
+          "ars": "$ 1,000,000",
+          "usd": "USD 650"
+        }
       }
     ],
     "disclaimer": "Prices are orientative. Final quote depends on scope, number of sections and special requirements."

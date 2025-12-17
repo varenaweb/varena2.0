@@ -63,7 +63,9 @@ for (let i = 0; i < 3; i += 1) {
     textField(`plans.cards[${i}].title`, `Plans – card ${i + 1} title`),
     textareaField(`plans.cards[${i}].main`, `Plans – card ${i + 1} main text`),
     ...createListFields(`plans.cards[${i}].list`, `Plans – card ${i + 1} list item`, 4, "textarea"),
-    textareaField(`plans.cards[${i}].note`, `Plans – card ${i + 1} note`)
+    textareaField(`plans.cards[${i}].note`, `Plans – card ${i + 1} note`),
+    textField(`plans.cards[${i}].price.ars`, `Plans – card ${i + 1} price (ARS)`),
+    textField(`plans.cards[${i}].price.usd`, `Plans – card ${i + 1} price (USD)`)
   );
 }
 
