@@ -10,6 +10,7 @@ const apiLimiter = require("./middleware/rateLimit");
 const contactRoutes = require("./routes/contact");
 const adminRoutes = require("./routes/admin");
 const contentService = require("./services/contentService");
+const { connectDB } = require("./services/db");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -130,9 +131,22 @@ app.use((err, req, res, next) => {
 });
 
 if (require.main === module) {
-  app.listen(PORT, () => {
-    console.log(`Varena backend listening on port ${PORT}`);
-  });
+const dbReady = connectDB().catch((error) => {
+  console.error("Mongo connection error:", error);
+});
+
+if (require.main === module) {
+  dbReady
+    .then(() => {
+      app.listen(PORT, () => {
+        console.log(`Varena backend listening on port ${PORT}`);
+      });
+    })
+    .catch((error) => {
+      console.error("Server startup aborted due to Mongo error:", error);
+      process.exit(1);
+    });
 }
 
 module.exports = app;
+module.exports.dbReady = dbReady;
