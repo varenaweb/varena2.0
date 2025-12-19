@@ -38,6 +38,27 @@ router.post("/logout", (req, res) => {
   res.redirect("/menu-qr/admin/login");
 });
 
+router.get("/api/:slug", requireMenuAuth(true), async (req, res, next) => {
+  try {
+    const menu = await getMenuBySlug(req.params.slug);
+    if (!menu) {
+      return res.status(404).json({ error: "Menú no encontrado." });
+    }
+    return res.json(menu);
+  } catch (error) {
+    return next(error);
+  }
+});
+
+router.put("/api/:slug", requireMenuAuth(true), async (req, res) => {
+  try {
+    await updateMenuContent(req.params.slug, req.body);
+    return res.json({ ok: true });
+  } catch (error) {
+    return res.status(400).json({ error: error.message || "No se pudo guardar el menú." });
+  }
+});
+
 router.get("/:slug", requireMenuAuth(true), async (req, res, next) => {
   try {
     const menu = await getMenuBySlug(req.params.slug);
@@ -45,45 +66,14 @@ router.get("/:slug", requireMenuAuth(true), async (req, res, next) => {
       return res.status(404).render("menu-admin/edit", {
         slug: req.params.slug,
         menuJson: "{}",
-        error: "Menú no encontrado.",
-        saved: false,
       });
     }
     return res.render("menu-admin/edit", {
       slug: req.params.slug,
-      menuJson: JSON.stringify(
-        {
-          name: menu.name,
-          currency: menu.currency,
-          taxNote: menu.taxNote,
-          branding: menu.branding,
-          sections: menu.sections,
-          notes: menu.notes,
-        },
-        null,
-        2
-      ),
-      error: null,
-      saved: req.query.saved === "1",
+      menuJson: JSON.stringify(menu),
     });
   } catch (error) {
     return next(error);
-  }
-});
-
-router.post("/:slug", requireMenuAuth(true), async (req, res, next) => {
-  const { menuJson } = req.body;
-  try {
-    const parsed = JSON.parse(menuJson);
-    await updateMenuContent(req.params.slug, parsed);
-    return res.redirect(`/menu-qr/admin/${req.params.slug}?saved=1`);
-  } catch (error) {
-    return res.render("menu-admin/edit", {
-      slug: req.params.slug,
-      menuJson: menuJson || "",
-      error: error.message || "No se pudo guardar el menú.",
-      saved: false,
-    });
   }
 });
 

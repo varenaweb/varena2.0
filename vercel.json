@@ -10,6 +10,7 @@
           "styles.css",
           "menu.css",
           "menu-admin.css",
+          "menu-admin-app.js",
           "script.js",
           "contact.js",
           "contact-config.js"

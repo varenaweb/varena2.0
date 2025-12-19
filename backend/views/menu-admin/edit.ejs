@@ -3,37 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Editar menú - <%= slug %></title>
+  <title>Editor de menú - <%= slug %></title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/menu-admin.css">
 </head>
 <body class="menu-admin edit-page">
-  <div class="card">
-    <header>
-      <div>
-        <h1>Editar menú: <%= slug %></h1>
-        <p>Modificá el JSON siguiendo el formato del template.</p>
-      </div>
-      <form method="post" action="/menu-qr/admin/logout">
-        <button type="submit">Cerrar sesión</button>
-      </form>
-    </header>
-    <% if (saved) { %>
-      <p class="status">¡Cambios guardados correctamente!</p>
-    <% } %>
-    <% if (error) { %>
-      <p class="alert alert-error"><%= error %></p>
-    <% } %>
-    <form method="post" action="/menu-qr/admin/<%= slug %>">
-      <label for="menuJson">Contenido del menú (JSON)</label>
-      <textarea name="menuJson" id="menuJson" required><%- menuJson %></textarea>
-      <button type="submit">Guardar menú</button>
+  <header class="menu-admin-topbar">
+    <div>
+      <p class="topbar-label">Menú de</p>
+      <h1><%= slug %></h1>
+    </div>
+    <form method="post" action="/menu-qr/admin/logout">
+      <button type="submit" class="btn btn-outline">Cerrar sesión</button>
     </form>
-    <p style="margin-top:1rem; font-size:0.9rem;">
-      Fields admitidos: <code>name</code>, <code>currency</code>, <code>taxNote</code>, <code>branding</code>, <code>sections</code>, <code>notes</code>.
-    </p>
-  </div>
+  </header>
+
+  <main id="menu-app"
+        data-slug="<%= slug %>"
+        data-menu='<%- menuJson %>'>
+    <noscript>
+      <p class="alert alert-error">Este editor requiere JavaScript para funcionar.</p>
+    </noscript>
+    <div class="menu-admin-app">
+      <section class="panel">
+        <h2>Información general</h2>
+        <div class="field-grid two">
+          <label>
+            Nombre del restaurante
+            <input type="text" data-field="name" placeholder="Ej: Restaurante Demo">
+          </label>
+          <label>
+            Moneda
+            <input type="text" data-field="currency" placeholder="ARS, USD, etc.">
+          </label>
+        </div>
+        <label>
+          Texto para el precio sin impuestos
+          <input type="text" data-field="taxNote" placeholder="Sin impuestos nacionales:">
+        </label>
+      </section>
+
+      <section class="panel">
+        <h2>Branding</h2>
+        <div class="field-grid two">
+          <label>
+            Tagline
+            <input type="text" data-branding="tagline">
+          </label>
+          <label>
+            Colores (hex)
+            <div class="field-grid three">
+              <input type="text" data-branding="primaryColor" placeholder="#111827">
+              <input type="text" data-branding="secondaryColor" placeholder="#2563EB">
+              <input type="text" data-branding="accentColor" placeholder="#F97316">
+            </div>
+          </label>
+        </div>
+        <label>
+          Descripción
+          <textarea data-branding="description" rows="2"></textarea>
+        </label>
+        <div class="field-grid two">
+          <label>
+            Logo URL
+            <input type="text" data-branding="logoUrl" placeholder="https://...">
+          </label>
+          <label>
+            Imagen principal
+            <input type="text" data-branding="heroImage" placeholder="https://...">
+          </label>
+        </div>
+        <div class="field-grid two">
+          <label>
+            Dirección
+            <input type="text" data-contact="address">
+          </label>
+          <label>
+            Teléfono
+            <input type="text" data-contact="phone">
+          </label>
+          <label>
+            WhatsApp
+            <input type="text" data-contact="whatsapp">
+          </label>
+          <label>
+            Instagram
+            <input type="text" data-contact="instagram" placeholder="@usuario">
+          </label>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Categorías e ítems</h2>
+            <p>Agregá, renombrá o eliminá secciones e ítems libremente.</p>
+          </div>
+          <button type="button" class="btn" id="add-section">+ Nueva categoría</button>
+        </div>
+        <div id="sections-container" class="sections-container"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Notas</h2>
+            <p>Mensajes que aparecen al final del menú.</p>
+          </div>
+          <button type="button" class="btn btn-light" id="add-note">+ Agregar nota</button>
+        </div>
+        <div id="notes-container" class="notes-container"></div>
+      </section>
+
+      <section class="panel actions">
+        <div class="actions-buttons">
+          <button type="button" class="btn btn-primary" id="save-menu">Guardar cambios</button>
+          <button type="button" class="btn btn-outline" id="reload-menu">Descartar cambios</button>
+        </div>
+        <p id="save-status" class="save-status"></p>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="/menu-admin-app.js"></script>
 </body>
 </html>
