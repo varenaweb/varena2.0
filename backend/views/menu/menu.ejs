@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= menu.name %> | Menú QR</title>
+  <link rel="stylesheet" href="/menu.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="menu-page">
+  <header class="menu-hero" style="--primary:<%= menu.branding?.primaryColor || '#111827' %>;--accent:<%= menu.branding?.accentColor || '#f59e0b' %>;">
+    <div class="menu-hero-inner">
+      <% if (menu.branding?.logoUrl) { %>
+        <img src="<%= menu.branding.logoUrl %>" alt="<%= menu.name %>" class="menu-logo">
+      <% } else { %>
+        <div class="menu-logo-placeholder"><%= menu.name.charAt(0) %></div>
+      <% } %>
+      <div>
+        <p class="menu-kicker">Menú digital</p>
+        <h1 class="menu-title"><%= menu.name %></h1>
+        <% if (menu.branding?.tagline) { %>
+          <p class="menu-tagline"><%= menu.branding.tagline %></p>
+        <% } %>
+        <% if (menu.branding?.description) { %>
+          <p class="menu-description"><%= menu.branding.description %></p>
+        <% } %>
+      </div>
+    </div>
+    <ul class="menu-contact">
+      <% if (menu.branding?.contact?.address) { %>
+        <li><span>Dirección</span><strong><%= menu.branding.contact.address %></strong></li>
+      <% } %>
+      <% if (menu.branding?.contact?.phone) { %>
+        <li><span>Teléfono</span><strong><a href="tel:<%= menu.branding.contact.phone %>"><%= menu.branding.contact.phone %></a></strong></li>
+      <% } %>
+      <% if (menu.branding?.contact?.whatsapp) { %>
+        <li><span>WhatsApp</span><strong><a href="https://wa.me/<%= menu.branding.contact.whatsapp.replace(/[^0-9]/g, '') %>" target="_blank">Escribinos</a></strong></li>
+      <% } %>
+      <% if (menu.branding?.contact?.instagram) { %>
+        <li><span>Instagram</span><strong><a href="https://instagram.com/<%= menu.branding.contact.instagram.replace('@','') %>" target="_blank">@<%= menu.branding.contact.instagram.replace('@','') %></a></strong></li>
+      <% } %>
+    </ul>
+  </header>
+
+  <main class="menu-content">
+    <% (menu.sections || []).forEach((section) => { %>
+      <section id="<%= section.key %>" class="menu-section">
+        <header>
+          <p class="section-kicker"><%= section.key %></p>
+          <h2><%= section.title %></h2>
+          <% if (section.description) { %>
+            <p class="section-description"><%= section.description %></p>
+          <% } %>
+        </header>
+        <div class="menu-items">
+          <% section.items.forEach(item => { %>
+            <article class="menu-item">
+              <div class="menu-item-header">
+                <div>
+                  <h3><%= item.name %></h3>
+                  <% if (item.description) { %>
+                    <p class="menu-item-description"><%= item.description %></p>
+                  <% } %>
+                </div>
+                <% if (typeof item.price === "number") { %>
+                  <p class="menu-item-price"><%= formatPrice(item.price, menu.currency) %></p>
+                <% } else if (item.priceText) { %>
+                  <p class="menu-item-price"><%= item.priceText %></p>
+                <% } %>
+              </div>
+              <% if (typeof item.netPrice === "number") { %>
+                <p class="menu-item-net">
+                  <span><%= menu.taxNote || "Sin impuestos:" %></span>
+                  <strong><%= formatPrice(item.netPrice, menu.currency) %></strong>
+                </p>
+              <% } %>
+              <% if (item.note) { %>
+                <p class="menu-item-note"><%= item.note %></p>
+              <% } %>
+              <% if (item.badges && item.badges.length) { %>
+                <div class="menu-item-badges">
+                  <% item.badges.forEach(badge => { %>
+                    <span class="badge"><%= badge %></span>
+                  <% }); %>
+                </div>
+              <% } %>
+              <% if (item.imageUrl) { %>
+                <div class="menu-item-image">
+                  <img src="<%= item.imageUrl %>" alt="<%= item.name %>">
+                </div>
+              <% } %>
+            </article>
+          <% }); %>
+        </div>
+      </section>
+    <% }); %>
+
+    <% if (Array.isArray(menu.notes) && menu.notes.length) { %>
+      <section class="menu-notes">
+        <h3>Notas</h3>
+        <ul>
+          <% menu.notes.forEach(note => { %>
+            <li><%= note %></li>
+          <% }); %>
+        </ul>
+      </section>
+    <% } %>
+  </main>
+</body>
+</html>

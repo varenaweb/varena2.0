@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Editar menú - <%= slug %></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/menu-admin.css">
+</head>
+<body class="menu-admin edit-page">
+  <div class="card">
+    <header>
+      <div>
+        <h1>Editar menú: <%= slug %></h1>
+        <p>Modificá el JSON siguiendo el formato del template.</p>
+      </div>
+      <form method="post" action="/menu-qr/admin/logout">
+        <button type="submit">Cerrar sesión</button>
+      </form>
+    </header>
+    <% if (saved) { %>
+      <p class="status">¡Cambios guardados correctamente!</p>
+    <% } %>
+    <% if (error) { %>
+      <p class="alert alert-error"><%= error %></p>
+    <% } %>
+    <form method="post" action="/menu-qr/admin/<%= slug %>">
+      <label for="menuJson">Contenido del menú (JSON)</label>
+      <textarea name="menuJson" id="menuJson" required><%- menuJson %></textarea>
+      <button type="submit">Guardar menú</button>
+    </form>
+    <p style="margin-top:1rem; font-size:0.9rem;">
+      Fields admitidos: <code>name</code>, <code>currency</code>, <code>taxNote</code>, <code>branding</code>, <code>sections</code>, <code>notes</code>.
+    </p>
+  </div>
+</body>
+</html>

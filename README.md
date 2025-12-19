@@ -17,3 +17,13 @@
 ## Internationalization
 - Backend responses + email text: edit `backend/locales/en.js` and `backend/locales/es.js`.
 - Frontend inline form messages: edit the `CONTACT_COPY` object in `contact.js`.
+
+## Menús QR para restaurantes
+- Dependencias: MongoDB Atlas/local (`MONGODB_URI`) y `MENU_AUTH_SECRET` para firmar sesiones. Todos los clientes editan su menú desde `/menu-qr/admin`.
+- Crear un menú nuevo con el template genérico:
+  ```
+  node backend/scripts/createMenu.js <slug> "<Nombre del local>" <usuario> <contraseña>
+  ```
+  Esto genera categorías “Categoría 1…12” e items “Item 1…3” listos para personalizar.
+- Vista pública: `/menu-qr/<slug>` muestra el menú con colores y datos configurables.
+- Panel del cliente: `/menu-qr/admin/login` → ingresar slug + contraseña → editar JSON del menú (campos `name`, `currency`, `taxNote`, `branding`, `sections`, `notes`). Cada slug tiene usuario/clave independientes.

@@ -9,7 +9,9 @@ const cookieParser = require("cookie-parser");
 const apiLimiter = require("./middleware/rateLimit");
 const contactRoutes = require("./routes/contact");
 const adminRoutes = require("./routes/admin");
+const menuAdminRoutes = require("./routes/menuAdmin");
 const contentService = require("./services/contentService");
+const menuService = require("./services/menuService");
 const { connectDB } = require("./services/db");
 
 const app = express();
@@ -56,6 +58,7 @@ app.use("/api", apiLimiter);
 
 app.use("/api/contact", contactRoutes);
 app.use("/admin", adminRoutes);
+app.use("/menu-qr/admin", menuAdminRoutes);
 
 const recaptchaSiteKey = process.env.RECAPTCHA_SITE_KEY || "";
 const contactApi = process.env.CONTACT_API || "/api/contact";
@@ -121,6 +124,32 @@ app.get("/en/plans", (req, res, next) => renderPage("plans", "en", req, res, nex
 app.get("/contacto", (req, res, next) => renderPage("contact", "es", req, res, next));
 app.get("/en/contact", (req, res, next) => renderPage("contact", "en", req, res, next));
 
+function formatPrice(amount, currency = "ARS") {
+  if (typeof amount !== "number") return amount;
+  const locale = currency === "USD" ? "en-US" : "es-AR";
+  const formatted = amount.toLocaleString(locale, {
+    style: "currency",
+    currency,
+    minimumFractionDigits: 2,
+  });
+  return formatted;
+}
+
+app.get("/menu-qr/:slug", async (req, res, next) => {
+  try {
+    const menu = await menuService.getMenuBySlug(req.params.slug);
+    if (!menu) {
+      return res.status(404).render("menu/not-found", { slug: req.params.slug });
+    }
+    return res.render("menu/menu", {
+      menu,
+      formatPrice,
+    });
+  } catch (error) {
+    return next(error);
+  }
+});
+
 app.get("/api/health", (req, res) => {
   res.json({ ok: true, status: "healthy" });
 });
@@ -130,7 +159,6 @@ app.use((err, req, res, next) => {
   res.status(500).send("Internal server error");
 });
 
-if (require.main === module) {
 const dbReady = connectDB().catch((error) => {
   console.error("Mongo connection error:", error);
 });

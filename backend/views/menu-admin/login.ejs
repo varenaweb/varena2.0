@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acceso a menús</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/menu-admin.css">
+</head>
+<body class="menu-admin">
+  <div class="card">
+    <h1>Ingresá a tu menú</h1>
+    <form method="post" action="/menu-qr/admin/login">
+      <% if (error === "invalid") { %>
+        <p class="alert alert-error">Usuario o contraseña incorrectos.</p>
+      <% } else if (error === "missing") { %>
+        <p class="alert alert-error">Completá todos los campos.</p>
+      <% } %>
+      <label>
+        Slug o identificador
+        <input type="text" name="slug" placeholder="ej: restaurante1" required>
+      </label>
+      <label>
+        Contraseña
+        <input type="password" name="password" required>
+      </label>
+      <% if (next) { %>
+        <input type="hidden" name="next" value="<%= next %>">
+      <% } %>
+      <button type="submit">Ingresar</button>
+    </form>
+  </div>
+</body>
+</html>

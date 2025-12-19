@@ -8,6 +8,8 @@
         "includeFiles": [
           "img/**",
           "styles.css",
+          "menu.css",
+          "menu-admin.css",
           "script.js",
           "contact.js",
           "contact-config.js"
