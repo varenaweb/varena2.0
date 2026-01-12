@@ -1,14 +1,14 @@
 const { MongoClient } = require("mongodb");
 
 const uri = process.env.MONGODB_URI;
-if (!uri) {
-  throw new Error("Missing MONGODB_URI environment variable");
-}
 
 let client;
 let database;
 
 async function connectDB() {
+  if (!uri) {
+    throw new Error("Missing MONGODB_URI environment variable");
+  }
   if (database) {
     return database;
   }
