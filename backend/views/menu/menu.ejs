@@ -4,20 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><%= menu.name %> | Menú QR</title>
-  <link rel="stylesheet" href="/menu.css">
+  <link rel="stylesheet" href="<%= assetBase %>/menu.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="menu-page">
-  <header class="menu-hero" style="--primary:<%= menu.branding?.primaryColor || '#111827' %>;--accent:<%= menu.branding?.accentColor || '#f59e0b' %>;">
+  <% const taxRate = typeof menu.taxRate === "number" ? menu.taxRate : 21; %>
+  <% const heroImage = menu.branding?.heroImage; %>
+  <% const heroStyles = [
+    `--primary:${menu.branding?.primaryColor || '#111827'}`,
+    `--accent:${menu.branding?.accentColor || '#f59e0b'}`,
+    `--secondary:${menu.branding?.secondaryColor || '#2563eb'}`
+  ];
+  if (heroImage) heroStyles.push(`--hero-image:url('${heroImage}')`);
+  %>
+  <header class="menu-hero <%= heroImage ? 'menu-hero--with-image' : '' %>" style="<%= heroStyles.join(';') %>">
+    <div class="menu-hero-overlay"></div>
     <div class="menu-hero-inner">
       <% if (menu.branding?.logoUrl) { %>
         <img src="<%= menu.branding.logoUrl %>" alt="<%= menu.name %>" class="menu-logo">
       <% } else { %>
         <div class="menu-logo-placeholder"><%= menu.name.charAt(0) %></div>
       <% } %>
-      <div>
+      <div class="menu-hero-text">
         <p class="menu-kicker">Menú digital</p>
         <h1 class="menu-title"><%= menu.name %></h1>
         <% if (menu.branding?.tagline) { %>
@@ -57,35 +67,31 @@
         <div class="menu-items">
           <% section.items.forEach(item => { %>
             <article class="menu-item">
-              <div class="menu-item-header">
-                <div>
-                  <h3><%= item.name %></h3>
-                  <% if (item.description) { %>
-                    <p class="menu-item-description"><%= item.description %></p>
+                <div class="menu-item-body">
+                  <div class="menu-item-header">
+                    <h3><%= item.name %></h3>
+                  </div>
+                  <p class="menu-item-description"><%= item.description || " " %></p>
+                  <% if (typeof item.price === "number") { %>
+                    <p class="menu-item-price"><%= formatPrice(item.price, menu.currency) %></p>
+                  <% } else if (item.priceText) { %>
+                    <p class="menu-item-price"><%= item.priceText %></p>
                   <% } %>
-                </div>
                 <% if (typeof item.price === "number") { %>
-                  <p class="menu-item-price"><%= formatPrice(item.price, menu.currency) %></p>
-                <% } else if (item.priceText) { %>
-                  <p class="menu-item-price"><%= item.priceText %></p>
+                  <% const netValue = item.price / (1 + (taxRate || 0) / 100); %>
+                  <p class="menu-item-net">
+                    <span><%= menu.taxNote || "Sin impuestos:" %></span>
+                    <strong><%= formatPrice(netValue, menu.currency) %></strong>
+                  </p>
+                <% } %>
+                <% if (item.badges && item.badges.length) { %>
+                  <div class="menu-item-badges">
+                    <% item.badges.forEach(badge => { %>
+                      <span class="badge"><%= badge %></span>
+                    <% }); %>
+                  </div>
                 <% } %>
               </div>
-              <% if (typeof item.netPrice === "number") { %>
-                <p class="menu-item-net">
-                  <span><%= menu.taxNote || "Sin impuestos:" %></span>
-                  <strong><%= formatPrice(item.netPrice, menu.currency) %></strong>
-                </p>
-              <% } %>
-              <% if (item.note) { %>
-                <p class="menu-item-note"><%= item.note %></p>
-              <% } %>
-              <% if (item.badges && item.badges.length) { %>
-                <div class="menu-item-badges">
-                  <% item.badges.forEach(badge => { %>
-                    <span class="badge"><%= badge %></span>
-                  <% }); %>
-                </div>
-              <% } %>
               <% if (item.imageUrl) { %>
                 <div class="menu-item-image">
                   <img src="<%= item.imageUrl %>" alt="<%= item.name %>">

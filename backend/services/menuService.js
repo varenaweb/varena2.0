@@ -47,12 +47,11 @@ function createTemplateItems() {
     const price = basePrice + index * 2000;
     items.push({
       name: `Item ${index}`,
-      description: "Describe ingredientes, tamaños o cualquier detalle relevante.",
+      description: "",
       price,
-      netPrice: Number((price / 1.21).toFixed(2)),
       imageUrl: "",
       badges: [],
-      note: "Mensaje opcional para recomendaciones o restricciones.",
+      note: "",
     });
   }
   return items;
@@ -95,6 +94,7 @@ async function createMenuWithTemplate({ slug, name, username, password }) {
     name,
     currency: "ARS",
     taxNote: "Sin impuestos nacionales:",
+    taxRate: 21,
     branding: { ...TEMPLATE_BRANDING },
     sections,
     notes: [...TEMPLATE_NOTES],
@@ -133,6 +133,9 @@ async function updateMenuContent(slug, payload) {
   }
   if (payload.currency) {
     update.currency = payload.currency;
+  }
+  if (typeof payload.taxRate === "number") {
+    update.taxRate = payload.taxRate;
   }
   if (payload.taxNote) {
     update.taxNote = payload.taxNote;

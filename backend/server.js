@@ -37,13 +37,21 @@ app.use(
           "'unsafe-inline'",
           "https://www.google.com",
           "https://www.gstatic.com",
+          "https://widget.cloudinary.com",
+          "https://upload-widget.cloudinary.com",
         ],
-        scriptSrcElem: ["'self'", "https://www.google.com", "https://www.gstatic.com"],
+        scriptSrcElem: [
+          "'self'",
+          "https://www.google.com",
+          "https://www.gstatic.com",
+          "https://widget.cloudinary.com",
+          "https://upload-widget.cloudinary.com",
+        ],
         styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
         fontSrc: ["'self'", "https://fonts.gstatic.com", "data:"],
-        imgSrc: ["'self'", "data:", "https://www.gstatic.com"],
+        imgSrc: ["'self'", "data:", "https://www.gstatic.com", "https:"],
         connectSrc: ["'self'", "https://www.google.com", "https://www.gstatic.com"],
-        frameSrc: ["'self'", "https://www.google.com"],
+        frameSrc: ["'self'", "https://www.google.com", "https://widget.cloudinary.com", "https://upload-widget.cloudinary.com"],
       },
     },
   })
@@ -109,6 +117,18 @@ async function renderPage(page, lang, req, res, next) {
     next(error);
   }
 }
+
+// Expose absolute asset base so templates can reference CSS without HTTPS rewrites on LAN.
+app.use((req, res, next) => {
+  res.locals.assetBase = `${req.protocol}://${req.get("host")}`;
+  next();
+});
+
+// Force correct MIME type for the standalone menu stylesheet even when accessed via LAN IPs.
+app.get("/menu.css", (req, res) => {
+  res.type("text/css");
+  res.sendFile(path.join(__dirname, "../menu.css"));
+});
 
 app.use(express.static(path.join(__dirname, "../")));
 

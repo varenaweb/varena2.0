@@ -1,8 +1,10 @@
 const express = require("express");
 const { verifyCredentials, getMenuBySlug, updateMenuContent } = require("../services/menuService");
 const { createSession, destroySession, readSession, requireMenuAuth } = require("../middleware/menuAuth");
+const { isConfigured: isCloudinaryConfigured, CLOUDINARY_UPLOAD_PRESET } = require("../services/cloudinaryService");
 
 const router = express.Router();
+const CLOUDINARY_CLOUD_NAME = process.env.CLOUDINARY_CLOUD_NAME;
 
 router.get("/login", (req, res) => {
   const session = readSession(req);
@@ -66,11 +68,18 @@ router.get("/:slug", requireMenuAuth(true), async (req, res, next) => {
       return res.status(404).render("menu-admin/edit", {
         slug: req.params.slug,
         menuJson: "{}",
+        cloudinary: null,
       });
     }
     return res.render("menu-admin/edit", {
       slug: req.params.slug,
       menuJson: JSON.stringify(menu),
+      cloudinary: isCloudinaryConfigured()
+        ? {
+            cloudName: CLOUDINARY_CLOUD_NAME,
+            uploadPreset: CLOUDINARY_UPLOAD_PRESET,
+          }
+        : null,
     });
   } catch (error) {
     return next(error);

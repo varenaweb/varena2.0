@@ -18,10 +18,8 @@
 - Backend responses + email text: edit `backend/locales/en.js` and `backend/locales/es.js`.
 - Frontend inline form messages: edit the `CONTACT_COPY` object in `contact.js`.
 
-## Menus QR para restaurantes
-- Dependencias: MongoDB Atlas/local (`MONGODB_URI`) y `MENU_AUTH_SECRET` para firmar sesiones. Cada cliente edita su menú desde `/menu-qr/admin`.
-- Crear un menú nuevo con el template genérico:  
-  `node backend/scripts/createMenu.js <slug> "<Nombre del local>" <usuario> <contraseña>`  
-  Esto genera 12 categorías “Categoría n” y 3 ítems “Item n” listos para personalizar.
+## Menús QR para restaurantes
+- Dependencias: MongoDB Atlas/local (`MONGODB_URI`), `MENU_AUTH_SECRET` y, para habilitar el uploader integrado, `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`, `CLOUDINARY_UPLOAD_PRESET`. Cada cliente edita su menú desde `/menu-qr/admin`.
+- Crear un menú nuevo con el template genérico: `node backend/scripts/createMenu.js <slug> "<Nombre del local>" <usuario> <contraseña>` (genera 12 categorías “Categoría n” y 3 ítems “Item n” listos para personalizar).
 - Vista pública: `/menu-qr/<slug>` muestra el menú con los datos configurables.
-- Panel del cliente: `/menu-qr/admin/login` → ingresar slug + contraseña → editor visual para modificar datos generales, colores, categorías, ítems y notas (sin tocar JSON). Cada slug tiene usuario/clave independientes.
+- Panel del cliente: `/menu-qr/admin/login` → ingresar slug + contraseña → editor visual (con subida de imágenes a Cloudinary) para modificar datos generales, colores, categorías, ítems y notas. Cada slug tiene usuario/clave independientes.

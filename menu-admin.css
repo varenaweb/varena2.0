@@ -160,6 +160,42 @@ button {
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
 
+.upload-field label {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.upload-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.upload-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.upload-inline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.link-preview {
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.link-preview.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
 .btn {
   padding: 0.65rem 1.5rem;
   background: #2563eb;
@@ -189,6 +225,23 @@ button {
 .btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+.help-text {
+  display: block;
+  margin-top: 0.25rem;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.item-net-preview {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.item-net-preview.hidden {
+  display: none;
 }
 
 .sections-container,

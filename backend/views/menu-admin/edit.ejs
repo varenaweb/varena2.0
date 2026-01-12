@@ -22,7 +22,10 @@
 
   <main id="menu-app"
         data-slug="<%= slug %>"
-        data-menu='<%- menuJson %>'>
+        data-menu='<%- menuJson %>'
+        data-cloud-name="<%= cloudinary?.cloudName || "" %>"
+        data-upload-preset="<%= cloudinary?.uploadPreset || "" %>"
+        data-can-upload="<%= cloudinary ? "1" : "0" %>">
     <noscript>
       <p class="alert alert-error">Este editor requiere JavaScript para funcionar.</p>
     </noscript>
@@ -42,6 +45,10 @@
         <label>
           Texto para el precio sin impuestos
           <input type="text" data-field="taxNote" placeholder="Sin impuestos nacionales:">
+        </label>
+        <label>
+          IVA (%)
+          <input type="number" min="0" step="0.1" data-field="taxRate" placeholder="21">
         </label>
       </section>
 
@@ -66,14 +73,26 @@
           <textarea data-branding="description" rows="2"></textarea>
         </label>
         <div class="field-grid two">
-          <label>
-            Logo URL
-            <input type="text" data-branding="logoUrl" placeholder="https://...">
-          </label>
-          <label>
-            Imagen principal
-            <input type="text" data-branding="heroImage" placeholder="https://...">
-          </label>
+          <div class="upload-field">
+            <label for="logo-url">Logo URL</label>
+            <div class="upload-control">
+              <input id="logo-url" type="text" data-branding="logoUrl" placeholder="https://...">
+              <div class="upload-actions">
+                <button type="button" class="btn btn-light upload-trigger" data-upload-target="branding.logoUrl" data-upload-folder="branding">Subir</button>
+                <a href="#" class="link-preview" target="_blank" data-preview-target="branding.logoUrl">Ver</a>
+              </div>
+            </div>
+          </div>
+          <div class="upload-field">
+            <label for="hero-image">Imagen principal</label>
+            <div class="upload-control">
+              <input id="hero-image" type="text" data-branding="heroImage" placeholder="https://...">
+              <div class="upload-actions">
+                <button type="button" class="btn btn-light upload-trigger" data-upload-target="branding.heroImage" data-upload-folder="branding">Subir</button>
+                <a href="#" class="link-preview" target="_blank" data-preview-target="branding.heroImage">Ver</a>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="field-grid two">
           <label>
@@ -93,6 +112,9 @@
             <input type="text" data-contact="instagram" placeholder="@usuario">
           </label>
         </div>
+        <% if (!cloudinary) { %>
+          <p class="alert alert-error">Subida de imágenes deshabilitada. Configurá Cloudinary para habilitarla.</p>
+        <% } %>
       </section>
 
       <section class="panel">
@@ -127,6 +149,7 @@
     </div>
   </main>
 
+  <script src="https://widget.cloudinary.com/v2.0/global/all.js"></script>
   <script type="module" src="/menu-admin-app.js"></script>
 </body>
 </html>
